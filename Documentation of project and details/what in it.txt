@@ -1,0 +1,22 @@
+DOCUMENTATAION FOR THE PROJECT. INCLUDE ALL FUNCTIONALITIES WHICH ADD IN PROJECT..
+=========================================================================================
+
+1) date picker
+2) validations form both correct and add
+3)live checking passw and email
+4)dependent combo box for countries
+5)multi selected combo box checks
+6)after data form submission show component of msg .further i have set another page of show msg.
+7)modal box in admin fetch data in modal
+8)toggle button enabled / disabled dynamic through jquery/ajax	
+9)user authorized or non like ( approve by admin then user redirect to other page ex: update dating form)
+10)protect routes from middleware
+11) add sweetalert notification in add photos and more areas
+12)make add photos advansed version type
+13)photos approved through toggle .
+14).after complete this proj .correct date in DOB form watch vdo 28
+15)make profile in adv
+16)set default pic of user if user is exist then set his pic otherwise set avatar
+17)jquery album slider 
+18.) sent req or msg after login otherwise it will be redirect on login or home page... 
+19. home page per current login user ki profile show horhe the wo htadi logic lga kr ofline hoga tw show hogi agar on hoga tw ni hogi.

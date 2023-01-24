@@ -1,0 +1,34 @@
+Dating project in laravel 5.8
+
+Remembers/Bugs 
+1.change password issue .check button code in seting page and overall
+
+2.google recaptcha addition issue vdo no 5 check again ..
+
+3.datatable is not working in admin/view users.
+
+4.modal set karna he width and desigining
+
+5.after submit dating form on status 0 its fine. when i change status 0 to 1 then after login it show again dating form .
+
+6.when i press back button  from anypage to home page it will get back but not show logout button.check
+
+7.sweetalert not working .all code is good but due to jquery problm.
+
+8.chang admin password not working with new admin table ..watch vdo and check..
+
+9.searching profile not working..means not showing pics in array .watch 2nd vdo again of searching and then match the code.
+
+10. modal popup nahi lagrha check kro for response.blade page pr for msg show .VDO is 46
+
+11. sender and recvr msg not showing together .check vdo 46 or 47 .user vali
+
+12.set multiple sweetalert with single function or file .
+
+13. set seen / unseen complete .vdo no  48/49
+
+14.vdo no 59 me 2nd functionality search ki he .or hume search k page me b yhi add krni h jo 1st me kri.
+
+14. update seen msgs or remaining msgs .vdo 50
+
+15.vdo no 51 rehti h for sent msgs k ley 

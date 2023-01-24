@@ -1,0 +1,40 @@
+/* ==================================================== */
+
+#buy-ticket-modal .modal-header {
+    padding: 15px;  
+    color: #703075; 
+  }
+  
+  #buy-ticket-modal .modal-header .close {
+   
+    margin-right: 20px; ;
+    color: #703075;
+    float: right;
+    margin-right: -1.4%;
+    top: 0;
+  }
+ 
+  #buy-ticket-modal .modal-body .form-group {
+    margin-bottom: 10px;
+  }
+  
+  
+  /*--------------------------------------------------------------
+  # Buy Tickets Section
+  --------------------------------------------------------------*/
+   
+  
+  #buy-ticket-modal .btn {
+    font-size: 15px;
+    border-radius: 50px;
+    padding: 10px 40px;
+    transition: all 0.2s;
+    background-color: #703075;
+    border: 0;
+    color: #fff;
+  }
+  
+  #buy-ticket-modal .btn:hover {
+    background-color: #362a41;
+  }
+  

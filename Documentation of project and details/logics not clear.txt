@@ -1,0 +1,7 @@
+1). in vdo of 18 ( another logic build in update user form after fetch values in field.check ) clear this 
+2)photos all function not clear
+3) images fetch in index page funct-- not clear 
+4)sent req or msg after login otherwise it will be redirect on login or home page... understand the logic
+5) in 43 vdo logic is not clear .fetching name and city on video time 27.00 mints ...(send and recv msgs logic not clear)
+6.in vdo no 56 of frnd req sent consept not clear. like (acceptfrndreq) method
+7.vdo no 57 not clear
