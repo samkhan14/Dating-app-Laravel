@@ -28,7 +28,7 @@ Route::group(['middleware' => ['frontlogin']], function () {
 	Route::any('/review','UsersController@review');
 	Route::any('/responses','UsersController@responses');
 	Route::get('/delete-response/{id}','UsersController@deleteResponse');
-	Route::any('/sent-messages','UsersController@sentMessages'); 
+	Route::any('/sent-messages','UsersController@sentMessages');
 	Route::get('/delete-photo/{photo}','UsersController@deletePhoto');
 	Route::get('/default-photo/{photo}','UsersController@defaultPhoto');
 	Route::match(['get', 'post'], '/contact/{username}', 'UsersController@contactProfile');
@@ -67,5 +67,4 @@ Route::group(['middleware' => ['adminlogin']],function(){
 Route::any('/check-email','UsersController@checkEmail');
 Route::get('/check-username','UsersController@checkUsername');
 
-
-
+// Route::get('test/{user_id}', [\App\Http\Controllers\UsersController::class, 'test']);

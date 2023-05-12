@@ -356,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 650px;
-  background-image: url("/img/frontend_images/site/couple10.jpg");
+  background-image: url("/img/frontend_images/site/bdsm.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center;
@@ -877,7 +877,7 @@ color: #d9d7db;
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials {  
+.testimonials {
   background-image: url("/img/frontend_images/site/hugpose.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -890,7 +890,7 @@ color: #d9d7db;
 
 .testimonials .testimonial-item .testimonial-img {
   width: 90px;
-  border-radius: 50%; 
+  border-radius: 50%;
   margin: -40px 0 0 40px;
   position: relative;
   z-index: 2;
@@ -977,7 +977,7 @@ color: #d9d7db;
 .map{
   background: url("/img/frontend_images/site/backgroundoftestimonal.png") center center no-repeat;
   background-size: cover;
-  
+
   position: relative;
 }
 
@@ -1063,7 +1063,7 @@ color: #d9d7db;
 
 .team .member .social a:hover {
   color: #cdcacc;
-} 
+}
 
 /* .team .member .social i {
   font-size: 16px;
@@ -1717,7 +1717,7 @@ color: #d9d7db;
 #buy-ticket-modal .modal-header {
   padding: 15px;
   background: #703075;
-  color: #d9d7db; 
+  color: #d9d7db;
 }
 
 #buy-ticket-modal .modal-header .close {
@@ -1726,10 +1726,10 @@ color: #d9d7db;
   color: white;
 }
 #buy-ticket-modal .modal-header ul {
-  border: none; 
+  border: none;
   }
   #buy-ticket-modal .modal-header ul li {
-  margin: 0;  
+  margin: 0;
 }
 #buy-ticket-modal .modal-header ul li a {
   border: none;
@@ -1739,7 +1739,7 @@ color: #d9d7db;
 }
 #buy-ticket-modal .modal-header ul li.active a {
   color: #d9d7db;
-  
+
 }
 #buy-ticket-modal .modal-header ul li a:hover {
   border: none;
@@ -1755,7 +1755,7 @@ color: #d9d7db;
 /*--------------------------------------------------------------
 # Buy Tickets Section
 --------------------------------------------------------------*/
- 
+
 
 #buy-ticket-modal .btn {
   font-size: 15px;
@@ -1794,8 +1794,8 @@ color: #d9d7db;
   border: 1px solid #ccc;
   height: calc(3rem + 2px) !important;
   border-radius:0;
-  
-  
+
+
 }
 .wrn-btn{
   background: #703075 !important;
@@ -1890,7 +1890,7 @@ button.btn.btn-danger.btn-sm.def-photo {
     float: right;
     bottom: 30px;
     right: 78px;
-}   
+}
 
 
 /*profile page*/

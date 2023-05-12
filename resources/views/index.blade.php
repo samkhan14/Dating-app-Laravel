@@ -20,9 +20,9 @@ use App\User;
         </div>
       </div>
        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="fade-left">
-       
-        
-      </div> 
+
+
+      </div>
     </div>
   </div>
 
@@ -30,8 +30,8 @@ use App\User;
 
 <main id="main">
 
-   <!-- ======= Searching area  Section ======= -->  
-   
+   <!-- ======= Searching area  Section ======= -->
+<!--
    <section class="search-sec">
     <div class="container">
       <div class="row">
@@ -40,17 +40,17 @@ use App\User;
           @if(Auth::check())
     <h3><a href="{{ url('/chat/'.Auth::User()['username'])}}" target="_blank"> Live Chat</a></h3>
     @endif
-      <iframe src="https://www6.cbox.ws/box/?boxid=847392&boxtag=qFBzIQ" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+      <iframe src="https://www6.cbox.ws/box/?boxid=847392&boxtag=qFBzIQ" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
        </div>
         </div>
         <div class="col-sm-6">
-          
+
         </div>
       </div>
-      
-</section>
-   <!-- ======= Searching area  Section ======= -->  
-   
+
+</section> -->
+   <!-- ======= Searching area  Section ======= -->
+
    <section class="search-sec">
        <div class="container">
         <h2 class="text-center mt-0" style="color: whitesmoke">Find Your Partner</h2> &nbsp;
@@ -59,25 +59,25 @@ use App\User;
                <div class="row">
                    <div class="col-lg-12">
                        <div class="row">
-                           <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                           <div class="col-lg-2 col-md-2 col-sm-12 p-2">
                                <select class="form-control search-slt" id="exampleFormControlSelect1" name="gender">
                                    <option>Looking for ?</option>
                                    <option value="Male">Male</option>
                                    <option value="Female">Female</option>
-                                   
-                               </select> 
+
+                               </select>
                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-12 p-0">                     
-                               <select class="form-control search-slt" 
+                            <div class="col-lg-2 col-md-2 col-sm-12 p-2">
+                               <select class="form-control search-slt"
                                id="exampleFormControlSelect1" name="miniAge">
                                <option>Of Age ?</option>
                                <?php $mincount = 16;
-                               while($mincount <= 48 ){ ?>                                   
+                               while($mincount <= 48 ){ ?>
                                <option value="{{ $mincount}}">{{ $mincount }}years</option>
-                                   <?php $mincount = $mincount + 1; }?>                       
+                                   <?php $mincount = $mincount + 1; }?>
                                </select>
                            </div>
-                             <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                             <div class="col-lg-2 col-md-2 col-sm-12 p-2">
                                <select class="form-control search-slt" id="exampleFormControlSelect1" name="maxAge">
                                    <option>To 45 Years</option>
                                    <?php $maxcount = 16;
@@ -86,16 +86,16 @@ use App\User;
                                    <?php $maxcount = $maxcount + 1;} ?>
                                </select>
                            </div>
-                           <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                           <div class="col-lg-2 col-md-2 col-sm-12 p-2">
                              <?php $getcountries = Country::get(); ?>
                             <select class="form-control search-slt" id="exampleFormControlSelect1" name="country">
                               <option value="">Anywhere</option>
                               @foreach($getcountries as $country)
                             <option value="{{$country->name}}" @if($country->name == "Pak") selected @endif > {{$country->name}}</option>
-                                @endforeach                                
+                                @endforeach
                             </select>
                         </div>
-                           <div class="col-lg-3 col-md-2 col-sm-12 p-0">
+                           <div class="col-lg-3 col-md-2 col-sm-12 p-2">
                                <button type="submit" class="wrn-btn">Search</button>
                            </div>
                        </div>
@@ -109,7 +109,7 @@ use App\User;
   <!-- ======= Recent profiles  Section ======= -->
   <section id="team" class="team">
     <div class="container">
-        
+
       <div class="section-title" data-aos="fade-up">
         <h2>Recent Profiles</h2>
         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
@@ -118,10 +118,10 @@ use App\User;
       <div class="row">
         <?php $count = 1; ?>
         @foreach($recent_users as $user)
-        @if(!empty($user->details) && $user->details->status == 1)           
+        @if(!empty($user->details) && $user->details->status == 1)
           @if($count<=4)
           @if(Auth::check())
-          @if(Auth::user()->username != $user->details->username)         
+          @if(Auth::user()->username != $user->details->username)
           <div class="col-lg-4 col-md-6 ">
             @foreach($user->photos as $key => $photo)
             @if($photo->default_photo == "Yes")
@@ -131,7 +131,7 @@ use App\User;
             @endif
             @endforeach
 
-          <div class="member" data-aos="zoom-in">           
+          <div class="member" data-aos="zoom-in">
 
               @if(!empty($user_photo))
             <div class="pic">
@@ -147,10 +147,10 @@ use App\User;
 
             <div class="member-info">
             <h4>{{$user->name}}</h4>
-              <span> 
+              <span>
                 {{-- conver dob to age --}}
-                <?php 
-                echo $diff = date('Y') - date('Y',strtotime($user->details->dob));  ?> Yrs 
+                <?php
+                echo $diff = date('Y') - date('Y',strtotime($user->details->dob));  ?> Yrs
               </span>
               <div class="social">
                 <!-- <a href=""><i class="icofont-twitter"></i></a>
@@ -158,7 +158,7 @@ use App\User;
                 <a href=""><i class="icofont-instagram"></i></a> -->
                 <a href="#chatme{{ $user->id}}">Connect With me</i></a>
               </div>
-            </div>  
+            </div>
           </div>
         </div>
         @endif
@@ -172,7 +172,7 @@ use App\User;
           @endif
           @endforeach
 
-        <div class="member" data-aos="zoom-in">           
+        <div class="member" data-aos="zoom-in">
 
             @if(!empty($user_photo))
           <div class="pic">
@@ -188,10 +188,10 @@ use App\User;
 
           <div class="member-info">
           <h4>{{$user->name}}</h4>
-            <span> 
+            <span>
               {{-- conver dob to age --}}
-              <?php 
-              echo $diff = date('Y') - date('Y',strtotime($user->details->dob));  ?> Yrs 
+              <?php
+              echo $diff = date('Y') - date('Y',strtotime($user->details->dob));  ?> Yrs
             </span>
             <div class="social">
               <!-- <a href=""><i class="icofont-twitter"></i></a>
@@ -199,14 +199,14 @@ use App\User;
               <a href=""><i class="icofont-instagram"></i></a> -->
               <a href="#chatme{{ $user->id}}">Connect With me</i></a>
             </div>
-          </div>  
+          </div>
         </div>
       </div>
         @endif
         <?php $count = $count+1; ?>
         @endif
         @endif
-        @endforeach        
+        @endforeach
       </div>
     </div>
   </section><!-- End Team Section -->
@@ -216,7 +216,7 @@ use App\User;
     <div class="container">
       <div class="section-title" data-aos="fade-up">
         <h2> Three good reasons for Core69 </h2>
-        
+
         <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
       </div>
 
@@ -226,7 +226,7 @@ use App\User;
             <img src="{{ asset('img/frontend_images/site/round1.png')}}" style="width: 155px; height: 155px;margin-left: 20px;" alt="no">
             <!-- <div class="icon"><i class="bx bxl-dribbble"></i></div> -->
             <h4 class="title"><a href="">Maximum anonymity and security</a></h4>
-              
+
           </div>
         </div>
 
@@ -234,7 +234,7 @@ use App\User;
           <div class="icon-box-2 ">
             <img src="{{ asset('img/frontend_images/site/round2.png')}}" style="width: 155px; height: 155px;margin-left: 20px;" alt="no">
             <h4 class="title"><a href=""> Treated and tested profiles </a></h4>
-           
+
           </div>
         </div>
 
@@ -242,7 +242,7 @@ use App\User;
           <div class="icon-box-2">
             <img src="{{ asset('img/frontend_images/site/round3.png')}}" style="width: 155px; height: 155px;margin-left: 20px;" alt="no">
             <h4 class="title"><a href=""> No subscriptions, no hidden costs </a></h4>
-           
+
           </div>
         </div>
 
@@ -250,7 +250,7 @@ use App\User;
           <div class="icon-box-2 ">
             <img src="{{ asset('img/frontend_images/site/round1.png')}}" style="width: 155px; height: 155px;margin-left: 20px;" alt="no">
             <h4 class="title"><a href="">Maximum Languages Supported</a></h4>
-            
+
           </div>
         </div>
 
@@ -262,14 +262,14 @@ use App\User;
    <!-- ======= Team (top clients) Section ======= -->
    <section id="team" class="team">
     <div class="container">
-        
+
       <div class="section-title" data-aos="fade-up">
         <h2>Recent Profiles</h2>
         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div>
 
       <div class="row">
-        
+
         <div class="col-lg-4 col-md-6">
           <div class="member" data-aos="zoom-in">
             <div class="pic"><img src="{{ asset('img/frontend_images/site/beauty1.jpg')}}" class="img-fluid" alt=""></div>
@@ -320,10 +320,10 @@ use App\User;
    <!-- ======= Services ( Rating and avg) Section ======= -->
    <section id="services" class="services section-bg">
     <div class="container">
-        
+
       <div class="section-title" data-aos="fade-up">
         <h2> Innovation In Online Dating </h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit..</p> 
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit..</p>
       </div>
 
       <div class="row">
@@ -372,9 +372,9 @@ use App\User;
    <!-- ======= Team Section (wordl testimonals) ======= -->
    <section id="team" class="team">
      <div class="map">
-    <div class="container">  
-      
-       
+    <div class="container">
+
+
       <div class="section-title" data-aos="fade-up">
         <h2>Connect Eith Amazing People</h2>
         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. </p>
@@ -385,9 +385,9 @@ use App\User;
         <div class="col-lg-10 col-md-8">
           <div class="member" data-aos="zoom-in">
             <div class="pic"><img src="{{ asset('img/frontend_images/site/people backg.png')}}"  class="img-fluid" alt=""></div>
-           
+
           </div>
-        </div>         
+        </div>
 
       </div>
 
@@ -398,7 +398,7 @@ use App\User;
   <!-- ======= Testimonials Section ======= -->
   <section id="testimonials" class="testimonials">
     <div class="container">
-      
+
 
       <div class="section-title" data-aos="fade-up">
         <h2> What members say about us </h2>
@@ -468,13 +468,13 @@ use App\User;
   </section>
   <!-- End Testimonials Section -->
 
-      
+
       <!-- Modal login/reg Form -->
       <div id="buy-ticket-modal" class="modal fade">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">Please Login</h4>               
+              <h4 class="modal-title">Please Login</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -485,20 +485,20 @@ use App\User;
             </ul>
 
             </div>
-            <div class="modal-body">                     
+            <div class="modal-body">
               @if(empty(Auth::check()))
-              <div class="tab-content">                
+              <div class="tab-content">
 
                 <div id="login-form" class="tab-pane active">
-                    <form action="{{ url('login')}}" method="post"> 
+                    <form action="{{ url('login')}}" method="post">
                       {{ csrf_field() }}
 
                         <div class="form-group">
                             <label for="Name">User Name:</label>
                              {{-- for error msg --}}
-                          @if(Session::has('flash_message_error'))         
+                          @if(Session::has('flash_message_error'))
                           <div class="alert alert-error alert-block">
-                            <button type="button" class="close" data-dismiss="alert">×</button> 
+                            <button type="button" class="close" data-dismiss="alert">×</button>
                                   <strong> {{ session('flash_message_error') }}</strong>
                           </div>
                         @endif
@@ -513,7 +513,7 @@ use App\User;
                         </div>
                         <button type="submit" class="btn btn-default">Login</button>
                     </form>
-                </div>   
+                </div>
                    {{-- login form close --}}
 
 
@@ -549,18 +549,18 @@ use App\User;
 
                         <button type="submit" name="submit" class="btn btn-default">Register Now</button>
                     </form>
-                </div>  
+                </div>
                 {{-- end Registration form --}}
 
             </div>
             @endif
-              
+
             </div>
           </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
 
-      
+
   </main><!-- End #main -->
 
-@endsection                                                       
+@endsection

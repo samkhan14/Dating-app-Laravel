@@ -2,7 +2,7 @@
 @php
 use App\User;
 
-$datingCount = User::datingProfileExist(Auth::user()['id']);
+$datingCount = User::datingProfileExist(Auth::id());
 if($datingCount == 1){
   $datingcountText = "My Profile";
 }
@@ -20,7 +20,7 @@ $datingcountText = "Add Dating Profile";
     <div class="logo mr-auto">
     <h1 class="text-light"><a href="{{ url('/home')}}"></a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
-       <a href="index.php"><img src="{{ asset('img/frontend_images/site/logo1.png')}}" alt="noimg" ></a>
+       <a href="{{ url('/')}}"><img src="{{ asset('img/frontend_images/site/logo1.png')}}" alt="noimg" ></a>
     </div>
 
     @if(empty(Auth::check()))

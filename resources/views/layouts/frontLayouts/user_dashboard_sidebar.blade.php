@@ -173,7 +173,7 @@
 
                   <ul class="list-unstyled">
                 <li><a href="{{ url('/dashboard')}}" class="list-group-item  bg-active"> Dashboard </a></li>
-                <li><a href="{{ URL::to('profile',$uname)}}" class="list-group-item"> My Profile </a></li>
+                <li><a href="{{ URL::to('/profile')}}" class="list-group-item"> My Profile </a></li>
                 <li><a href="{{ url('/step/2')}}" class="list-group-item"> Edit Profile</a> </li>
                 <li><a href="{{ url('/step/3')}}" class="list-group-item"> My Photos</a> </li>
                 <li><a href="{{ url('/responses')}}" class="list-group-item"> Inbox</a> </li>
